@@ -1,0 +1,69 @@
+h1 Listing libations
+
+table
+  thead
+    tr
+      th Libation name
+      th Libation type
+      th Weight
+      th Weight type
+      th Container type
+      th Country made
+      th Company name
+      th Website
+      th Date drank
+      th Store purchased
+      th City purchased
+      th Prov purchased
+      th Country purchased
+      th Colour
+      th Pulp
+      th Can art
+      th Can look
+      th Sweet
+      th Juice
+      th Sip giz
+      th Flavour
+      th Buy again
+      th Carbonated
+      th Filename
+      th Comments
+      th
+      th
+      th
+
+  tbody
+    - @libations.each do |libation|
+      tr
+        td = libation.libation_name
+        td = libation.libation_type
+        td = libation.weight
+        td = libation.weight_type
+        td = libation.container_type
+        td = libation.country_made
+        td = libation.company_name
+        td = libation.website
+        td = libation.date_drank
+        td = libation.store_purchased
+        td = libation.city_purchased
+        td = libation.prov_purchased
+        td = libation.country_purchased
+        td = libation.colour
+        td = libation.pulp
+        td = libation.can_art
+        td = libation.can_look
+        td = libation.sweet
+        td = libation.juice
+        td = libation.sip_giz
+        td = libation.flavour
+        td = libation.buy_again
+        td = libation.carbonated
+        td = libation.filename
+        td = libation.comments
+        td = link_to 'Show', libation
+        td = link_to 'Edit', edit_libation_path(libation)
+        td = link_to 'Destroy', libation, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Libation', new_libation_path
